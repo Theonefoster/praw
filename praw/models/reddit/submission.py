@@ -276,13 +276,6 @@ class SubmissionModeration(ThingModerationMixin):
 
     .. code:: python
 
-       praw.models.reddit.submission.SubmissionModeration(id="8dmv8z").approve()
-
-    Or, more simply, this class can be accessed through the
-    ``.mod`` method of moderatable submissions:
-
-    .. code:: python
-
        reddit.submission(id="8dmv8z").mod.approve()
 
     """
