@@ -412,6 +412,8 @@ class SubmissionModeration(ThingModerationMixin):
             submission = reddit.submission(id='5or86n')
             submission.mod.spoiler()
 
+        See also :meth:`~.unspoiler`
+
         """
         self.thing._reddit.post(API_PATH['spoiler'],
                                 data={'id': self.thing.fullname})
@@ -481,6 +483,8 @@ class SubmissionModeration(ThingModerationMixin):
             submission = reddit.subreddit('test').submit('not spoiler',
                                                          selftext='spoiler')
             submission.mod.unspoiler()
+
+        See also :meth:`~.spoiler`
 
         """
         self.thing._reddit.post(API_PATH['unspoiler'],
